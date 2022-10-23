@@ -6,10 +6,10 @@ import bienvenida as b
 '''
 Iniciación del juego
 '''
-tablero_impactos_maquina = np.full((10,10), " ")
+tablero_impactos_maquina = t.creartableros()
 t.imprimir_tablero(tablero_impactos_maquina)
 
-tablero_impactos_jugador = np.full((10,10), " ")
+tablero_impactos_jugador = t.creartableros()
 t.imprimir_tablero(tablero_impactos_jugador)
 
 tablero_barcos_maquina = t.iniciar_tablero_con_barcos()
