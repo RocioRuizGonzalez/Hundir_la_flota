@@ -7,9 +7,6 @@ tam = 10
 # Variable para el número de barcos a colocar
 barcos = 10
 
-# Variable para el fin de la partida
-game_over = True
-
 # Variable para número de barcos hundidos
 barcos_hundidos = 0
 

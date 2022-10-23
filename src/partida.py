@@ -125,12 +125,3 @@ def turnojugador(tablero_barcos_maquina, tablero_barcos_jugador, tablero_impacto
             time.sleep(2)
             t.imprimir_tablero(tablero_impactos_maquina)
             juegomaquina(tablero_barcos_jugador, tablero_barcos_maquina, tablero_impactos_jugador, tablero_impactos_maquina)
-
-       
-    #Bucle que define el comportamiento de no haber barcos en algunos de los dos tableros: 
-    if "O" not in tablero_barcos_jugador:
-        print("¡Lo siento! Has perdido la partida")
-
-    elif "O" not in tablero_barcos_maquina:
-        print("¡Enhorabuena! Has ganado la partida")
-   

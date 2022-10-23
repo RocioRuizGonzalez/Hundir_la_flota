@@ -2,6 +2,7 @@ import numpy as np
 import partida as p
 import tableros as t
 import bienvenida as b
+import salida as s
 
 '''
 Iniciación del juego
