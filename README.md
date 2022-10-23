@@ -1,4 +1,5 @@
-# Hundir la flota
+![Headerjuego](Headerjuego.jpg)
+
 ## Descripción
 Juego desarrollado en 5 scripts: bienvenida, constants, partida, tableros y main a través de lenguaje python. Durante la partida, se reproducen varios sonidos para hacer el juego más interesante. Los ficheros de audio están separados en el directorio _media_.
 
