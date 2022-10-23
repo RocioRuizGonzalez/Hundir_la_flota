@@ -5,9 +5,9 @@ import time
 import pygame
 
 pygame.mixer.init()
-impacto = pygame.mixer.Sound("explosion.wav")
-agua = pygame.mixer.Sound("watersplash.wav")
-salir = pygame.mixer.Sound("goodbye.wav")
+impacto = pygame.mixer.Sound("../media/explosion.wav")
+agua = pygame.mixer.Sound("../media/watersplash.wav")
+salir = pygame.mixer.Sound("../media/goodbye.wav")
 
 '''
 Definicion de funcion del juego que interactúa con el jugador
