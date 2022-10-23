@@ -17,9 +17,10 @@ Si el jugador toca alguna de las partes del barco, repite turno, en caso contrar
 **Fin del juego**
 -----------
 
-El juego termina con la fución _fin_de_juego_, la cual comprueba si existen aún barcos en el tablero de la máquina o el tablero del jugador, dando fin a la partida al cumplirse alguna de estas dos condiciones. 
+El juego termina con la función _fin_de_juego_, la cual comprueba si existen aún barcos en el tablero de la máquina o el tablero del jugador, dando fin a la partida al cumplirse alguna de estas dos condiciones. 
 
-#### Librerías usadas
+-----------
+#### Librerías utilizadas
 * Numpy
 * Random
 * Time
