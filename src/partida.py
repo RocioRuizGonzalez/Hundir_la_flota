@@ -22,7 +22,7 @@ def juegomaquina(tablero_barcos_jugador, tablero_barcos_maquina, tablero_impacto
             tablero_barcos_jugador[coordenadas_maquina] = "X"
             tablero_impactos_jugador[coordenadas_maquina] = "X"
             time.sleep(1)
-            print("La maquina ha acertado!")
+            print("¡La maquina ha acertado!")
             impacto.play()
             time.sleep(2)
             t.imprimir_tablero(tablero_impactos_jugador)
@@ -32,7 +32,7 @@ def juegomaquina(tablero_barcos_jugador, tablero_barcos_maquina, tablero_impacto
             tablero_barcos_jugador[coordenadas_maquina] = "-"
             tablero_impactos_jugador[coordenadas_maquina] = "-"
             time.sleep(1)
-            print ("La maquina ha dado en agua!")
+            print ("¡La maquina ha dado en agua!")
             agua.play()
             time.sleep(2)
             t.imprimir_tablero(tablero_impactos_jugador)
@@ -43,7 +43,7 @@ def juegomaquina(tablero_barcos_jugador, tablero_barcos_maquina, tablero_impacto
             tablero_barcos_jugador[coordenadas_maquina] = "-"
             tablero_impactos_jugador[coordenadas_maquina] = "-"
             time.sleep(1)
-            print ("La maquina ha dado en agua!")
+            print ("¡La maquina ha dado en agua!")
             agua.play()
             time.sleep(2)
             t.imprimir_tablero(tablero_impactos_jugador)
@@ -52,10 +52,10 @@ def juegomaquina(tablero_barcos_jugador, tablero_barcos_maquina, tablero_impacto
             break
     #Bucle que define el comportamiento de no haber barcos en algunos de los dos tableros:     
     if "O" not in tablero_barcos_jugador:
-        print("Lo siento! Has perdido la partida")
+        print("¡Lo siento! Has perdido la partida")
 
     elif "O" not in tablero_barcos_maquina:
-        print("Enhorabuena! Has ganado la partida")             
+        print("¡Enhorabuena! Has ganado la partida")
             
 '''
 Definicion de funcion del juego que interactúa con el jugador
@@ -64,7 +64,7 @@ def turnojugador(tablero_barcos_maquina, tablero_barcos_jugador, tablero_impacto
     #Establece la condición de seguir ejecutando el bucle mientras hayan barcos en el tablero de ambos jugadores
     while "O" in tablero_barcos_maquina and "O" in tablero_barcos_jugador: 
 
-        coord1 = (input("Introduce 1 coordenada del 1 al 10 por favor: "))
+        coord1 = (input("Introduce 1 coordenada del 0 al 9 por favor: "))
         # Try and except que introduce la posibilidad de salir del juego con cualquier otra tecla que no sea int
         try:
             coord1 = int(coord1)
@@ -79,7 +79,7 @@ def turnojugador(tablero_barcos_maquina, tablero_barcos_jugador, tablero_impacto
             print("Introduce un número valido por favor")  
             continue  
             
-        letra = input("Introduce letra, por favor: ")
+        letra = input("Introduce letra de la A la J, por favor: ")
         coord2 = cons.alfabeto[letra]
         try:
             coord2 = int(coord2)
@@ -102,7 +102,7 @@ def turnojugador(tablero_barcos_maquina, tablero_barcos_jugador, tablero_impacto
         if tablero_barcos_maquina[coorden] == "O":
             tablero_barcos_maquina[coorden] = "X"
             tablero_impactos_maquina[coorden] = "X"
-            print("Has acertado!")
+            print("¡Has acertado!")
             impacto.play()
             time.sleep(2)
             t.imprimir_tablero(tablero_impactos_maquina)
@@ -110,7 +110,7 @@ def turnojugador(tablero_barcos_maquina, tablero_barcos_jugador, tablero_impacto
         elif tablero_barcos_maquina[coorden] == "-":
             tablero_barcos_maquina[coorden] = "-"
             tablero_impactos_maquina[coorden] = "-"
-            print ("Has vuelto a dar en agua!")
+            print ("¡Has vuelto a dar en agua!")
             agua.play()
             time.sleep(2)
             t.imprimir_tablero(tablero_impactos_maquina)
@@ -119,7 +119,7 @@ def turnojugador(tablero_barcos_maquina, tablero_barcos_jugador, tablero_impacto
         elif tablero_barcos_maquina[coorden] == " ":
             tablero_barcos_maquina[coorden] = "-"
             tablero_impactos_maquina[coorden] = "-"
-            print ("Has dado en agua!")
+            print ("¡Has dado en agua!")
             agua.play()
             time.sleep(2)
             t.imprimir_tablero(tablero_impactos_maquina)
@@ -128,8 +128,8 @@ def turnojugador(tablero_barcos_maquina, tablero_barcos_jugador, tablero_impacto
        
     #Bucle que define el comportamiento de no haber barcos en algunos de los dos tableros: 
     if "O" not in tablero_barcos_jugador:
-        print("Lo siento! Has perdido la partida")
+        print("¡Lo siento! Has perdido la partida")
 
     elif "O" not in tablero_barcos_maquina:
-        print("Enhorabuena! Has ganado la partida")
+        print("¡Enhorabuena! Has ganado la partida")
    
