@@ -9,6 +9,7 @@ impacto = pygame.mixer.Sound("../media/explosion.wav")
 agua = pygame.mixer.Sound("../media/watersplash.wav")
 salir = pygame.mixer.Sound("../media/goodbye.wav")
 
+
 '''
 Definicion de funcion del juego que interactúa con el jugador
 '''
@@ -64,22 +65,27 @@ def turnojugador(tablero_barcos_maquina, tablero_barcos_jugador, tablero_impacto
     #Establece la condición de seguir ejecutando el bucle mientras hayan barcos en el tablero de ambos jugadores
     while "O" in tablero_barcos_maquina and "O" in tablero_barcos_jugador: 
 
-        coord1 = (input("Introduce 1 coordenada del 0 al 9 por favor: "))
-        # Try and except que introduce la posibilidad de salir del juego con cualquier otra tecla que no sea int
+        coord1 = int(input("Introduce 1 coordenada del 0 al 9 por favor: "))
+
+        if coord1 < 0 or coord1 > 9:
+            print("Introduce un número valido por favor")
+            continue
         try:
             coord1 = int(coord1)
-              
+        
         except Exception:
             print("Cerrando juego...")
             time.sleep(2)
             salir.play()
             print("Goodbye")
 
-        if coord1 < 0 or coord1 > 9:
-            print("Introduce un número valido por favor")  
-            continue  
-            
+        
         letra = input("Introduce letra de la A la J, por favor: ")
+        
+        if letra not in cons.alfabeto:
+            print("Introduce una letra válida por favor")
+            letra= input("Introduce letra de la A la J, por favor: ")
+            
         coord2 = cons.alfabeto[letra]
         try:
             coord2 = int(coord2)
@@ -90,11 +96,6 @@ def turnojugador(tablero_barcos_maquina, tablero_barcos_jugador, tablero_impacto
             salir.play()
             print("Goodbye")
             
-        #Se asegura de que el número introducido esté en el rango 
-        if coord2 < 0 or coord2 > 9:
-            print("Introduce un número valido por favor")
-            continue
-    
 
         coorden =tuple([(coord1),(coord2)])
 
