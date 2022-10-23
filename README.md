@@ -1,10 +1,10 @@
 ![Headerjuego](Headerjuego.jpg)
 
-**Descripción**
+**Descripción del juego**
 -----------
 Juego desarrollado en lenguaje python, utilizando 5 scripts: bienvenida, constants, partida, tableros y main, los cuales contienen las funciones necesarias para su ejecución. Durante la partida, se reproducen varios sonidos para hacer el juego más interesante. Los ficheros de audio están separados en el directorio _media_.
 
-**Desarrollo del juego**
+**Dinámica del juego**
 -----------
 Para iniciar el programa de juego hemos creado una bienvenida donde se saluda al usuario (jugador) y le presenta a su contrincante (la máquina, a quien hemos llamado "Popeye"). 
 
